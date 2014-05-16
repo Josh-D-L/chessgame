@@ -1,3 +1,147 @@
-git add --all
-git commit -m "Initial commit"
-git push
+<DOCTYPE html>
+<html>
+<head>
+<style>
+a {
+	color:#000;
+	display:block;
+	font-size:60px;
+	height:80px;
+	position:relative;
+	text-decoration:none;
+	text-shadow:0 1px #fff;
+	width:80px;
+}
+#chess_board { border:5px solid #333; }
+#chess_board td {
+	background:#fff;
+	background:-moz-linear-gradient(top, #fff, #eee);
+	background:-webkit-gradient(linear,0 0, 0 100%, from(#fff), to(#eee));
+	box-shadow:inset 0 0 0 1px #fff;
+	-moz-box-shadow:inset 0 0 0 1px #fff;
+	-webkit-box-shadow:inset 0 0 0 1px #fff;
+	height:80px;
+	text-align:center;
+	vertical-align:middle;
+	width:80px;
+}
+#chess_board tr:nth-child(odd) td:nth-child(even),
+#chess_board tr:nth-child(even) td:nth-child(odd) {
+	background:#ccc;
+	background:-moz-linear-gradient(top, #ccc, #eee);
+	background:-webkit-gradient(linear,0 0, 0 100%, from(#ccc), to(#eee));
+	box-shadow:inset 0 0 10px rgba(0,0,0,.4);
+	-moz-box-shadow:inset 0 0 10px rgba(0,0,0,.4);
+	-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,.4);
+}
+</style>
+</head>
+<body>
+<table id="chess_board" cellpadding="0" cellspacing="0">
+    <tr>
+        <td id="A8"><a href="http://4.bp.blogspot.com/-EZ3MePU-Uh4/TanAR9UX6dI/AAAAAAAACts/DpL83yMPOiY/s1600/Picture+2_6.png" class="rook black">&#9820;</a></td>
+        <td id="B8"><a href="http://theoldgiftshop.com/images/figurines/MD7322.JPG" class="night black">&#9822;</a></td>
+        <td id="C8"><a href="http://www.rjgeib.com/thoughts/prometheus/prometheus.jpg" class="bishop black">&#9821;</a></td>
+        <td id="D8"><a href="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR7j70VQz8vS2cucDxOe8eD-Q1gxT9eOLmE7NilUMMopenoKH9lCA" class="king black">&#9819;</a></td>
+        <td id="E8"><a href="http://elfinspell.com/images/RheaCastledA.jpg" class="queen black">&#9818;</a></td>
+        <td id="F8"><a href="http://www.rjgeib.com/thoughts/prometheus/prometheus.jpg" class="bishop black">&#9821;</a></td>
+        <td id="G8"><a href="http://theoldgiftshop.com/images/figurines/MD7322.JPG" class="night black">&#9822;</a></td>
+        <td id="H8"><a href="http://4.bp.blogspot.com/-EZ3MePU-Uh4/TanAR9UX6dI/AAAAAAAACts/DpL83yMPOiY/s1600/Picture+2_6.png" class="rook black">&#9820;</a></td>
+    </tr>
+    <tr>
+        <td id="A7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+        <td id="B7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+        <td id="C7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+        <td id="D7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+        <td id="E7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+        <td id="F7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+        <td id="G7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+        <td id="H7"><a href="http://9hmythology.wiki.hhh.k12.ny.us/file/view/300px-PallasGiustiniani.jpg/125512215/300px-PallasGiustiniani.jpg" class="pawn black">&#9823;</a></td>
+    </tr>
+    <tr>
+        <td id="A6"></td>
+        <td id="B6"></td>
+        <td id="C6"></td>
+        <td id="D6"></td>
+        <td id="E6"></td>
+        <td id="F6"></td>
+        <td id="G6"></td>
+        <td id="H6"></td>
+    </tr>
+    <tr>
+        <td id="A5"></td>
+        <td id="B5"></td>
+        <td id="C5"></td>
+        <td id="D5"></td>
+        <td id="E5"></td>
+        <td id="F5"></td>
+        <td id="G5"></td>
+        <td id="H5"></td>
+    </tr>
+    <tr>
+        <td id="A4"></td>
+        <td id="B4"></td>
+        <td id="C4"></td>
+        <td id="D4"></td>
+        <td id="E4"></td>
+        <td id="F4"></td>
+        <td id="G4"></td>
+        <td id="H4"></td>
+    </tr>
+    <tr>
+        <td id="A3"></td>
+        <td id="B3"></td>
+        <td id="C3"></td>
+        <td id="D3"></td>
+        <td id="E3"></td>
+        <td id="F3"></td>
+        <td id="G3"></td>
+        <td id="H3"></td>
+    </tr>
+    <tr>
+        <td id="A2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+        <td id="B2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+        <td id="C2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+        <td id="D2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+        <td id="E2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+        <td id="F2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+        <td id="G2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+        <td id="H2"><a href="http://www.rickriordan.com/Files/Images/Nemesis.jpg" class="pawn white">&#9817;</a></td>
+    </tr>
+    <tr>
+
+        <td id="A1"><a href="http://blogs.mtlakes.org/mythology/files/2013/12/Ares-vih567.jpeg" class="rook white">&#9814;</a></td>
+        <td id="B1"><a href="http://upload.wikimedia.org/wikipedia/commons/d/dd/Athena_Varvakeion_-_MANA_-_Fidias.jpg" class="night white">&#9816;</a></td>
+        <td id="C1"><a href="http://markandrewholmes.com/poseidon_sculpture.jpg" class="bishop white">&#9815;</a></td>
+        <td id="D1"><a href="http://img2.wikia.nocookie.net/__cb20121219132312/myth1/images/8/84/Zeus_2.jpg" class="king white">&#9813;</a></td>
+        <td id="E1"><a href="http://www.artemis-mounykhia.org/wp-content/uploads/2013/01/hera.jpg" class="wife white">&#9812;</a></td>
+        <td id="F1"><a href="http://markandrewholmes.com/poseidon_sculpture.jpg" class="bishop white">&#9815;</a></td>
+        <td id="G1"><a href="http://upload.wikimedia.org/wikipedia/commons/d/dd/Athena_Varvakeion_-_MANA_-_Fidias.jpg" class="night white">&#9816;</a></td>
+        <td id="H1"><a href="http://blogs.mtlakes.org/mythology/files/2013/12/Ares-vih567.jpeg" class="rook white">&#9814;</a></td>
+
+    </tr>
+
+</table>
+<p>
+Sorry the game doesn't work, but if you click the pieces it shows the god or titan that the piece is supposed to represent.
+
+Gods:
+
+(King) Zeus is the king of the gods.
+(Queen) Hera is Zeus’s wife, and queen of the gods.
+(Bishop) Poseidon is Zeus’s brother, and while he isn’t the king, they are equals in power. A Bishop is the king’s advisor.
+(Knight) The Knight is a very powerful and strategic unit in Chess, as it moves uniquely. Athena is the goddess of strategy. 
+(Rook) Ares is also powerful, and the god of war. The rook is a very aggressive piece.
+(Pawn) Nemesis is the goddess of revenge, and pawns often get in the way of people killing the more important pieces, standing where they can retaliate when one of their friends is killed.
+
+Titans:
+
+(King) Kronos is the king of the titans.
+(Queen) Rhea is Kronos’s wife.
+(Bishop) Prometheus was very wise, and bishops are the king’s advisor, so they should be wise.
+(Knight) Atlas lead the battle against the gods because Kronos could not, and was the leader of the battle.
+(Rook) Iapetus was the titan of mortality, which is the state of being subject to death. Rooks are very aggressive pieces in chess and being subject to death would probably require be aggressed upon.
+(Pawn) Pallas was the titan of warcraft, and pawns are very important to the battle of chess.
+</p>
+</body>
+</html>
